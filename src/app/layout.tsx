@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -27,7 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
+        <footer className="bg-primary-blue text-white py-6 text-center text-sm border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6">
+            <p>&copy; {new Date().getFullYear()} AirXpress Cambodia. All rights reserved.</p>
+          </div>
+        </footer>
       </body>
     </html>
   );
