@@ -14,21 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://airxpress.com.kh"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://airxpresscambodia.netlify.app"),
   title: {
-    default: "AirXpress Cambodia | Professional Logistics & Delivery Services",
+    default: "AirXpress Cambodia | Premium Travel & Property Management",
     template: "%s | AirXpress Cambodia",
   },
-  description: "AirXpress Cambodia provides reliable, fast, and secure logistics and delivery services across Cambodia. Expert handling for all your shipping needs.",
-  keywords: ["Logistics", "Delivery", "Cambodia", "Shipping", "Freight", "AirXpress"],
+  description: "Your trusted partner for comprehensive travel services and professional property management in Cambodia. We specialize in agent management properties and tailored travel solutions.",
+  keywords: ["Travel Agent", "Property Management", "Cambodia", "Real Estate", "Travel Services", "Agent Management", "AirXpress", "Accommodation", "Lease Management"],
   authors: [{ name: "AirXpress Cambodia" }],
   creator: "AirXpress Cambodia",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    title: "AirXpress Cambodia | Professional Logistics & Delivery Services",
-    description: "Reliable, fast, and secure logistics and delivery services across Cambodia.",
+    title: "AirXpress Cambodia | Premium Travel & Property Management",
+    description: "Your trusted partner for comprehensive travel services and professional property management in Cambodia.",
     siteName: "AirXpress Cambodia",
     images: [
       {
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AirXpress Cambodia | Professional Logistics & Delivery Services",
-    description: "Reliable, fast, and secure logistics and delivery services across Cambodia.",
+    title: "AirXpress Cambodia | Premium Travel & Property Management",
+    description: "Your trusted partner for comprehensive travel services and professional property management in Cambodia.",
     images: ["/og-image.jpg"],
   },
   robots: {
