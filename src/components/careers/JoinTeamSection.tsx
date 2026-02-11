@@ -13,12 +13,12 @@ const JoinTeamSection = () => {
                     <div className="space-y-6 text-gray-600 leading-relaxed">
                         <p>
                             Are you passionate about communication and eager to work with
-                            Japanese clients? AirXpress Cambodia is looking for talented
-                            individuals in Phnom Penh who want to build an international
+                            Japanese company? AirXpress Cambodia is looking for talented
+                            individuals in Cambodia who want to build an international
                             career in customer service.
                         </p>
                         <p>
-                            We value Japanese language skills and offer comprehensive training
+                            We value Communication skills and offer comprehensive training
                             programs to help you grow professionally. Whether you&apos;re a fresh
                             graduate or an experienced professional, we have opportunities for
                             you.

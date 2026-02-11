@@ -3,6 +3,10 @@ import React from "react";
 import SectionHeader from "./SectionHeader";
 
 const ContactSection = () => {
+
+    const EMAIL_ADDRESS = process.env.NEXT_PUBLIC_EMAIL_ADDRESS;
+    const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER;
+
     return (
         <section id="contact" className="py-20 px-6 md:px-12 bg-white">
             <div className="max-w-7xl mx-auto">
@@ -26,11 +30,9 @@ const ContactSection = () => {
                                 <div>
                                     <h4 className="font-bold text-primary-blue mb-1">Address</h4>
                                     <p className="text-gray-600 text-sm">
-                                        Phnom Penh Tower, 13th Floor
+                                        #14, Street 278, Phum 4, Sangkat Boeung Keng Kang I,
                                         <br />
-                                        #445 Monivong Boulevard
-                                        <br />
-                                        Phnom Penh, Cambodia
+                                        Khan Boeung Keng Kang, Phnom Penh, Cambodia
                                     </p>
                                 </div>
                             </div>
@@ -42,7 +44,7 @@ const ContactSection = () => {
                                 <div>
                                     <h4 className="font-bold text-primary-blue mb-1">Email</h4>
                                     <p className="text-gray-600 text-sm">
-                                        contact@airxpress.co.jp
+                                        {EMAIL_ADDRESS}
                                     </p>
                                 </div>
                             </div>
@@ -53,8 +55,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-primary-blue mb-1">Phone</h4>
-                                    <p className="text-primary-red font-bold text-lg">
-                                        +855 23 123 456
+                                    <p className="text-gray-600 text-sm">
+                                        {PHONE_NUMBER}
                                     </p>
                                 </div>
                             </div>

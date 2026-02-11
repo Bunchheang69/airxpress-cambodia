@@ -14,13 +14,13 @@ const ServicesSection = () => {
             icon: <MessageSquare className="w-8 h-8 text-white" />,
             title: "Hospitality Communication",
             description:
-                "Specialized support for hotels, restaurants, and tourism businesses, helping hosts communicate effectively with international guests.",
+                "Specialized support for hotels and tourism businesses, helping hosts communicate effectively with international guests.",
         },
         {
             icon: <Languages className="w-8 h-8 text-white" />,
             title: "Multilingual Assistance",
             description:
-                "Professional interpretation and translation services in Japanese, English, Khmer, and other languages to bridge communication gaps.",
+                "Professional interpretation and translation services in Japanese, English, Chinese, Korean and Khmer languages to bridge communication gaps.",
         },
         {
             icon: <Headphones className="w-8 h-8 text-white" />,
@@ -35,7 +35,7 @@ const ServicesSection = () => {
             <div className="max-w-7xl mx-auto">
                 <SectionHeader
                     title="Our Services"
-                    subtitle="We provide comprehensive communication solutions tailored to the unique needs of Japanese businesses serving international customers."
+                    subtitle="We provide comprehensive communication solutions tailored to the unique needs of Japanese businesses serving local and international guests."
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">

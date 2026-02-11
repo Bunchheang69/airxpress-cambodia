@@ -8,19 +8,19 @@ const AboutSection = () => {
             icon: <Building2 className="w-8 h-8 text-primary-red" />,
             title: "Osaka Headquarters",
             description:
-                "Our main office in Osaka serves as the command center for our operations across Japan and Southeast Asia.",
+                "Our main office in Osaka serves as the command center for our operations across Japan.",
         },
         {
             icon: <Globe2 className="w-8 h-8 text-primary-red" />,
             title: "Takushima Branch",
             description:
-                "Supporting our domestic operations with dedicated teams focused on regional client needs.",
+                "Supporting our domestic operations with dedicated teams focused on japanese guest support.",
         },
         {
             icon: <Users className="w-8 h-8 text-primary-red" />,
             title: "Cambodia Branch",
             description:
-                "Our Phnom Penh office provides multilingual support and serves as a strategic hub for our ASEAN operations.",
+                "Our Phnom Penh office provides multilingual support and serves international guests in Japan.",
         },
     ];
 

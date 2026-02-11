@@ -6,11 +6,12 @@ type BenefitsSectionProps = React.HTMLAttributes<HTMLDivElement>;
 const BenefitsSection: React.FC<BenefitsSectionProps> = ({ className, ...props }) => {
     const benefits = [
         "Competitive salary with performance bonuses",
-        "Japanese language training programs",
-        "International career opportunities",
-        "Professional development support",
+        "Training programs 2 times a year",
         "Friendly, multicultural work environment",
         "Health insurance and benefits package",
+        "Annual leave",
+        "Public holidays",
+        "Team building activities",
     ];
 
     return (
