@@ -2,10 +2,10 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 import SectionHeader from "./SectionHeader";
 
-const ContactSection = () => {
+const EMAIL_ADDRESS = process.env.NEXT_PUBLIC_EMAIL_ADDRESS;
+const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER;
 
-    const EMAIL_ADDRESS = process.env.NEXT_PUBLIC_EMAIL_ADDRESS;
-    const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER;
+const ContactSection = () => {
 
     return (
         <section id="contact" className="py-20 px-6 md:px-12 bg-white">
@@ -16,7 +16,6 @@ const ContactSection = () => {
                 />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-start">
-                    {/* Contact Details Card */}
                     <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
                         <h3 className="text-xl font-bold text-primary-blue mb-8">
                             AirXpress Cambodia Branch
