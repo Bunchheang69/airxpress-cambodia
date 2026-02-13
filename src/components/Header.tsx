@@ -5,7 +5,9 @@ const Header = () => {
     return (
         <header className="bg-primary-blue text-white py-4 px-6 md:px-12 flex justify-between items-center relative z-50 sticky top-0 shadow-md">
             <div className="flex items-center">
-                <Image src="/images/og-logo-white.webp" alt="AirXpress Logo" width={150} height={50} />
+                <Link href="/">
+                    <Image src="/images/og-logo-white.webp" alt="AirXpress Logo" width={150} height={50} />
+                </Link>
             </div>
 
             <nav className="hidden md:flex space-x-8 text-sm font-medium">
