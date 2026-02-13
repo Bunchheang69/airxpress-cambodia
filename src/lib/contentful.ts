@@ -60,6 +60,29 @@ export interface ContentfulResponse {
     limit: number;
 }
 
+// Helper to sanitize career entries
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function sanitizeCareer(item: any): Career {
+    return {
+        sys: {
+            id: item.sys.id,
+            createdAt: item.sys.createdAt,
+        },
+        fields: item.fields,
+    };
+}
+
+// Helper to sanitize assets
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function sanitizeAsset(item: any): Asset {
+    return {
+        sys: {
+            id: item.sys.id,
+        },
+        fields: item.fields,
+    };
+}
+
 export default async function getCareers(): Promise<ContentfulResponse> {
     const url = `${BASE_URL}/entries?access_token=${ACCESS_TOKEN}&content_type=careersAirxpress`;
 
@@ -70,7 +93,17 @@ export default async function getCareers(): Promise<ContentfulResponse> {
     }
 
     const data = await res.json();
-    return data;
+
+    // Sanitize the response to remove sys.space and other metadata that might trigger secret scanning
+    return {
+        items: data.items.map(sanitizeCareer),
+        includes: data.includes ? {
+            Asset: data.includes.Asset?.map(sanitizeAsset)
+        } : undefined,
+        total: data.total,
+        skip: data.skip,
+        limit: data.limit
+    };
 }
 
 export async function getCareer(id: string): Promise<ContentfulResponse> {
@@ -83,5 +116,14 @@ export async function getCareer(id: string): Promise<ContentfulResponse> {
     }
 
     const data = await res.json();
-    return data;
+
+    return {
+        items: data.items.map(sanitizeCareer),
+        includes: data.includes ? {
+            Asset: data.includes.Asset?.map(sanitizeAsset)
+        } : undefined,
+        total: data.total,
+        skip: data.skip,
+        limit: data.limit
+    };
 }
