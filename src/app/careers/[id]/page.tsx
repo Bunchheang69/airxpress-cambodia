@@ -1,4 +1,4 @@
-import { getCareer, Career, Asset } from "@/lib/contentful";
+import getCareers, { getCareer, Career, Asset } from "@/lib/contentful";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -6,6 +6,13 @@ import { notFound } from "next/navigation";
 
 interface Props {
     params: Promise<{ id: string }>;
+}
+
+export async function generateStaticParams() {
+    const careers = await getCareers();
+    return careers.items.map((career) => ({
+        id: career.sys.id,
+    }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

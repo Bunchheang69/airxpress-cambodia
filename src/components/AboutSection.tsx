@@ -30,7 +30,7 @@ const AboutSection = () => {
                 <div className="text-center mb-16">
                     <SectionHeader
                         title="About AirXpress"
-                        subtitle="Spacenet Co., Ltd. powers global hospitality communication through AirXpress — our dedicated multilingual call center service — bridging language gaps and helping Japanese businesses serve international customers with confidence."
+                        subtitle="Spacianet Co., Ltd. powers global hospitality communication through AirXpress — our dedicated multilingual call center service — bridging language gaps and helping Japanese businesses serve international customers with confidence."
                     />
                 </div>
 

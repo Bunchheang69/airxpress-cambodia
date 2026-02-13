@@ -1,5 +1,4 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import React from "react";
 import SectionHeader from "./SectionHeader";
 
 const EMAIL_ADDRESS = process.env.NEXT_PUBLIC_EMAIL_ADDRESS;

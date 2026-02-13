@@ -63,7 +63,7 @@ export interface ContentfulResponse {
 export default async function getCareers(): Promise<ContentfulResponse> {
     const url = `${BASE_URL}/entries?access_token=${ACCESS_TOKEN}&content_type=careersAirxpress`;
 
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await fetch(url, { next: { revalidate: 3600 } });
 
     if (!res.ok) {
         throw new Error("Contentful API error");
@@ -76,7 +76,7 @@ export default async function getCareers(): Promise<ContentfulResponse> {
 export async function getCareer(id: string): Promise<ContentfulResponse> {
     const url = `${BASE_URL}/entries?access_token=${ACCESS_TOKEN}&sys.id=${id}&include=1`;
 
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await fetch(url, { next: { revalidate: 3600 } });
 
     if (!res.ok) {
         throw new Error("Contentful API error");
